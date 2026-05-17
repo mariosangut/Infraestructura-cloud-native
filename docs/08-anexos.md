@@ -608,7 +608,7 @@ jobs:
 
 La siguiente imagen muestra la ejecución satisfactoria del *workflow* de integración continua, con todos los pasos —construcción *multi-arch*, publicación en GHCR y actualización del manifiesto en la rama `gitops`— completados sin errores.
 
-![Pipeline de GitHub Actions completado](assets/build-push.png)
+![Pipeline de GitHub Actions completado](assets/build.png)
 
 ### D.2. Estado *Healthy/Synced* en ArgoCD
 

@@ -5,67 +5,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TFG · Plataforma Cloud Native GitOps</title>
   <meta name="description" content="Diseño e Implementación de una Arquitectura Cloud Native basada en Microservicios y GitOps — Mario Sánchez Gutiérrez, I.E.S. Zaidín-Vergeles" />
-  <link rel="icon" type="image/svg+xml" href="https://kubernetes.io/images/favicon.png" />
 
   <!-- Docsify theme -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4.13.1/lib/themes/vue.css" />
 
-  <!-- Prism syntax highlighting for YAML, JS, Bash -->
+  <!-- Prism dark theme for code blocks -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1/themes/prism-one-dark.css" />
 
   <style>
     :root {
       --theme-color: #326CE5;
-      --sidebar-width: 280px;
+      --sidebar-width: 300px;
     }
+    /* Cover page — second button filled */
     .cover-main > p:last-child a:last-child {
       background-color: var(--theme-color);
       color: #fff;
     }
-    .markdown-section pre > code {
-      font-size: 0.85em;
+    /* Sidebar section headers rendered from # in _sidebar.md */
+    .sidebar-nav > ul > li > p {
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #999;
+      padding: 8px 0 4px;
+      margin: 0;
     }
-    .mermaid svg {
-      max-width: 100%;
-    }
+    .markdown-section pre > code { font-size: 0.83em; }
+    /* Mermaid diagrams always fill container */
+    .mermaid { text-align: center; margin: 1.5em 0; }
+    .mermaid svg { max-width: 100%; height: auto; }
   </style>
 </head>
 <body>
   <div id="app"></div>
 
+  <!-- Mermaid must load BEFORE $docsify is defined so the plugin can reference it -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
   <script>
+    /* Initialise Mermaid — startOnLoad:false so Docsify controls rendering */
+    mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+
+    /* Inline Mermaid plugin: converts fenced ```mermaid blocks on every page load */
+    function docsifyMermaidPlugin(hook) {
+      hook.doneEach(function () {
+        var elements = document.querySelectorAll('pre[data-lang="mermaid"]');
+        elements.forEach(function (pre) {
+          var code = pre.querySelector('code');
+          if (!code) return;
+          var div = document.createElement('div');
+          div.className = 'mermaid';
+          div.textContent = code.textContent.trim();
+          pre.parentNode.replaceChild(div, pre);
+        });
+        if (elements.length > 0) mermaid.run();
+      });
+    }
+
     window.$docsify = {
       name: 'TFG · Cloud Native GitOps',
       repo: 'https://github.com/ieszaidinvergeles/2-asir-bil-pasir-mario-sanchez-gutierrez',
-      loadSidebar: true,
-      coverpage: true,
+
+      /* Sidebar */
+      loadSidebar: '_sidebar.md',
+      subMaxLevel: 2,
+
+      /* Cover page */
+      coverpage: '_coverpage.md',
       onlyCover: false,
+
       auto2top: true,
-      subMaxLevel: 3,
+
+      /* Search plugin */
       search: {
-        placeholder: 'Buscar…',
+        placeholder: 'Buscar en la documentación…',
         noData: 'Sin resultados',
-        depth: 4,
+        depth: 3,
       },
+
+      /* Copy-code plugin */
       copyCode: {
         buttonText: 'Copiar',
         errorText:  'Error',
-        successText: 'Copiado',
+        successText: '✓ Copiado',
       },
+
+      /* Pagination plugin */
       pagination: {
         previousText: '← Anterior',
         nextText:     'Siguiente →',
         crossChapter: true,
       },
-      plugins: [],
+
+      plugins: [ docsifyMermaidPlugin ],
     };
   </script>
 
-  <!-- Docsify core -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <!-- Docsify core (pinned) -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4.13.1/lib/docsify.min.js"></script>
 
   <!-- Search -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4.13.1/lib/plugins/search.min.js"></script>
 
   <!-- Copy-code -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
@@ -78,10 +120,5 @@
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
-
-  <!-- Mermaid v10 -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-mermaid@latest/dist/docsify-mermaid.js"></script>
-  <script>mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });</script>
 </body>
 </html>

@@ -51,9 +51,9 @@ Los umbrales (*thresholds*) definidos para considerar la prueba superada son:
 - Percentil 95 de duración de peticiones: `p(95) < 2000 ms`
 - Tasa de errores: `rate < 0.05` (menos del 5 %)
 
-### Salida del terminal de K6
+### *Dashboard* de Grafana durante la prueba de carga
 
-![Resultados del test de carga en el terminal de K6](assets/test.png)
+![Dashboard de Grafana durante el test de carga K6](assets/grafana-dashboard.png)
 
 ---
 
