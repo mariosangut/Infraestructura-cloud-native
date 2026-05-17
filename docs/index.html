@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TFG · Plataforma Cloud Native GitOps</title>
+  <meta name="description" content="Diseño e Implementación de una Arquitectura Cloud Native basada en Microservicios y GitOps — Mario Sánchez Gutiérrez, I.E.S. Zaidín-Vergeles" />
+  <link rel="icon" type="image/svg+xml" href="https://kubernetes.io/images/favicon.png" />
+
+  <!-- Docsify theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+
+  <!-- Prism syntax highlighting for YAML, JS, Bash -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1/themes/prism-one-dark.css" />
+
+  <style>
+    :root {
+      --theme-color: #326CE5;
+      --sidebar-width: 280px;
+    }
+    .cover-main > p:last-child a:last-child {
+      background-color: var(--theme-color);
+      color: #fff;
+    }
+    .markdown-section pre > code {
+      font-size: 0.85em;
+    }
+    .mermaid svg {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script>
+    window.$docsify = {
+      name: 'TFG · Cloud Native GitOps',
+      repo: 'https://github.com/ieszaidinvergeles/2-asir-bil-pasir-mario-sanchez-gutierrez',
+      loadSidebar: true,
+      coverpage: true,
+      onlyCover: false,
+      auto2top: true,
+      subMaxLevel: 3,
+      search: {
+        placeholder: 'Buscar…',
+        noData: 'Sin resultados',
+        depth: 4,
+      },
+      copyCode: {
+        buttonText: 'Copiar',
+        errorText:  'Error',
+        successText: 'Copiado',
+      },
+      pagination: {
+        previousText: '← Anterior',
+        nextText:     'Siguiente →',
+        crossChapter: true,
+      },
+      plugins: [],
+    };
+  </script>
+
+  <!-- Docsify core -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+
+  <!-- Search -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+
+  <!-- Copy-code -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
+
+  <!-- Pagination -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
+
+  <!-- Prism syntax highlighting -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+
+  <!-- Mermaid v10 -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-mermaid@latest/dist/docsify-mermaid.js"></script>
+  <script>mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });</script>
+</body>
+</html>
