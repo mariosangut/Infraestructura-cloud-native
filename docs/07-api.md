@@ -1,3 +1,9 @@
+---
+title: "3.5 Modelo de Datos y API REST"
+description: Esquema PostgreSQL de la tabla clientes_potenciales, contrato JSON y endpoints de la API Node.js Express
+tags: api, postgresql, nodejs, rest, backend
+---
+
 # 3.5 Modelo de Datos y Especificación de la API
 
 Para que la infraestructura de microservicios tenga una utilidad real, se ha desarrollado un flujo de captación de información soportado por un modelo de datos relacional y un contrato de API RESTful.

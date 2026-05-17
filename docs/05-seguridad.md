@@ -1,3 +1,9 @@
+---
+title: "3.3.3–3.3.4 Seguridad y TLS"
+description: Gestión de secretos con SealedSecrets (criptografía asimétrica) y certificados TLS locales con mkcert
+tags: sealed-secrets, tls, mkcert, seguridad, kubernetes
+---
+
 # 3.3.3–3.3.4 Seguridad y TLS
 
 ## 3.3.3 Gestión de Secretos en Entornos Abiertos (SealedSecrets)

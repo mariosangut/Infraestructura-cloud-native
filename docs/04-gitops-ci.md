@@ -1,3 +1,9 @@
+---
+title: "3.3 Flujo GitOps y CI/CD"
+description: Pipeline CI/CD con GitHub Actions y Docker Buildx multi-arch, despliegue continuo con ArgoCD y patrón App of Apps
+tags: gitops, argocd, github-actions, ci-cd, docker, app-of-apps
+---
+
 # 3.3 Flujo de *GitOps* y Automatización
 
 ## 3.3.1 Fase de Integración Continua (GitHub Actions)

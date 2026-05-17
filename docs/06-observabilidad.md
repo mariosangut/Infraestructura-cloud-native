@@ -1,3 +1,9 @@
+---
+title: "3.4 Observabilidad y Pruebas de Carga"
+description: Stack Prometheus + Grafana, dashboard personalizado, métricas NGINX Ingress, pruebas K6 y escalado automático HPA
+tags: prometheus, grafana, k6, hpa, observabilidad, monitoring
+---
+
 # 3.4 Operaciones y Observabilidad
 
 Desplegar una arquitectura de microservicios en Kubernetes resuelve el problema del escalado, pero introduce un desafío técnico severo: la opacidad. Al distribuir la carga en múltiples contenedores efímeros, el *cluster* se convierte en una caja negra. Para garantizar la fiabilidad del sistema (el llamado «Día 2» de operaciones) se ha integrado el *stack* de monitorización compuesto por Prometheus y Grafana.

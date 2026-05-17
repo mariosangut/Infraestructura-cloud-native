@@ -1,3 +1,9 @@
+---
+title: "1. Definición del Proyecto"
+description: Objetivos, motivación y alcance del TFG de infraestructura Cloud Native con Kubernetes y GitOps
+tags: kubernetes, gitops, objetivos
+---
+
 # 1. Definición del Proyecto
 
 Este proyecto consiste en el diseño, despliegue y administración de una arquitectura de infraestructura *cloud native* basada en el modelo de microservicios. Utilizando Kubernetes como motor de orquestación, se ha construido un entorno de alta disponibilidad que aloja una aplicación web completa —separada en *frontend* y *backend*— respaldada por una base de datos relacional PostgreSQL. La infraestructura se gestiona en su totalidad bajo la filosofía *GitOps*, delegando la gestión del estado del *cluster* en repositorios versionados. El objetivo general del presente trabajo es implementar un ciclo de vida de desarrollo y operaciones (DevOps) completamente automatizado y seguro.

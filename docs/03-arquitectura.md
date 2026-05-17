@@ -1,3 +1,9 @@
+---
+title: "3.1–3.2 Arquitectura y Namespaces"
+description: Diseño de la arquitectura runtime, flujo de datos entre servicios y aislamiento lógico mediante Namespaces
+tags: kubernetes, arquitectura, namespaces, nginx-ingress
+---
+
 # 3.1–3.2 Arquitectura y Namespaces
 
 ## 3.1 Diseño de la Arquitectura y Flujo de Datos

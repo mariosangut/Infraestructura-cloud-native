@@ -1,3 +1,9 @@
+---
+title: "5. Recursos Bibliográficos"
+description: Referencias bibliográficas de las tecnologías empleadas en el TFG — documentación oficial de Kubernetes, ArgoCD, Prometheus, SealedSecrets y más
+tags: bibliografia, referencias
+---
+
 # 5. Recursos Bibliográficos
 
 Las referencias siguientes corresponden a la documentación oficial de las tecnologías empleadas en el diseño y la implementación del proyecto. Todas las fuentes fueron consultadas durante el desarrollo del Proyecto Intermodular en el curso 2025-2026.

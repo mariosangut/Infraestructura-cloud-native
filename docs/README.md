@@ -1,3 +1,9 @@
+---
+title: Inicio — TFG Cloud Native GitOps
+description: Documentación técnica del Proyecto Intermodular de CFGS ASIR — Kubernetes, ArgoCD, GitOps, Prometheus, SealedSecrets
+tags: kubernetes, gitops, argocd, ci-cd, tfg
+---
+
 # Plataforma Cloud Native · GitOps
 
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)

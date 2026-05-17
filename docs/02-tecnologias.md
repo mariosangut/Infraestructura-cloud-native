@@ -1,3 +1,9 @@
+---
+title: "2. Tecnologías Utilizadas"
+description: Stack tecnológico completo — Kubernetes, Docker, ArgoCD, GitHub Actions, Prometheus, SealedSecrets, K6
+tags: kubernetes, docker, argocd, github-actions, prometheus, grafana, sealed-secrets
+---
+
 # 2. Tecnologías Utilizadas
 
 En este proyecto se ha empleado un conjunto de herramientas tecnológicas que han permitido la automatización y el despliegue integral de la plataforma. A continuación se describen agrupadas por capa funcional.

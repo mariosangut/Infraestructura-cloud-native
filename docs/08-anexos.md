@@ -1,3 +1,9 @@
+---
+title: "4. Anexos"
+description: Estructura del repositorio, manifiestos YAML completos, workflows GitHub Actions, script K6 y capturas de evidencia
+tags: kubernetes, yaml, github-actions, k6, evidencias
+---
+
 # 4. Anexos
 
 ## 4.1 Anexo A. Estructura del Repositorio
