@@ -1,8 +1,8 @@
 /* Variables globales */
 :root {
     --bg-color: #f9fafb;
-    --text-color: #111827;
-    --primary-color: #0f2bdd;
+    --text-color: hsl(221, 39%, 11%);
+    --primary-color: #4ddf0f;
     --border-color: #e5e7eb;
     --input-border: #d1d5db;
     --success-bg: #dcfce3;
