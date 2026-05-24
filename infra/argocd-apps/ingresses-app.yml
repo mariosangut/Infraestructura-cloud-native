@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/ieszaidinvergeles/2-asir-bil-pasir-mario-sanchez-gutierrez.git'
+    repoURL: 'https://github.com/mariosangut/2-asir-bil-pasir-mario-sanchez-gutierrez.git'
     targetRevision: HEAD
     path: infra/ingresses
   destination:

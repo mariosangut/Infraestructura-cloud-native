@@ -48,7 +48,7 @@ jobs:
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git fetch origin gitops 2>/dev/null || true
         git checkout -B gitops origin/gitops 2>/dev/null || git checkout -b gitops
-        sed -i "s|ghcr.io/ieszaidinvergeles/tfg-frontend:.*|ghcr.io/ieszaidinvergeles/tfg-frontend:${{ github.sha }}|" apps/frontend/frontend.yml
+        sed -i "s|ghcr.io/mariosangut/tfg-frontend:.*|ghcr.io/mariosangut/tfg-frontend:${{ github.sha }}|" apps/frontend/frontend.yml
         git add apps/frontend/frontend.yml
         git diff --cached --quiet || git commit -m "ci: update frontend image to ${{ github.sha }}"
         git push origin gitops

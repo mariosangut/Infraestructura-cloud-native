@@ -19,7 +19,7 @@ flowchart LR
     Dev["👨‍💻 Developer\ngit push → main"]
     GH["GitHub Repository\nSingle Source of Truth"]
     CI["GitHub Actions CI\nbuild · test · push"]
-    GHCR["GHCR\nghcr.io/ieszaidinvergeles/\ntfg-frontend:sha\ntfg-backend-api:sha"]
+    GHCR["GHCR\nghcr.io/mariosangut/\ntfg-frontend:sha\ntfg-backend-api:sha"]
     Manifest["Rama gitops\nDeployment YAML\nimage: ...sha"]
     ArgoCD["ArgoCD\npoll cada 3 min"]
     K8s["Kubernetes Cluster\nRolling Update"]

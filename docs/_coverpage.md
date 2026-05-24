@@ -24,4 +24,4 @@ I.E.S. Zaidín-Vergeles · Granada · Curso 2025-2026
 - TLS local con mkcert
 
 [Comenzar](01-definicion.md)
-[GitHub](https://github.com/ieszaidinvergeles/2-asir-bil-pasir-mario-sanchez-gutierrez)
+[GitHub](https://github.com/mariosangut/2-asir-bil-pasir-mario-sanchez-gutierrez)

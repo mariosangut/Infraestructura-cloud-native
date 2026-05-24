@@ -48,7 +48,7 @@ jobs:
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git fetch origin gitops 2>/dev/null || true
         git checkout -B gitops origin/gitops 2>/dev/null || git checkout -b gitops
-        sed -i "s|ghcr.io/ieszaidinvergeles/tfg-backend-api:.*|ghcr.io/ieszaidinvergeles/tfg-backend-api:${{ github.sha }}|" apps/backend/deployment.yml
+        sed -i "s|ghcr.io/mariosangut/tfg-backend-api:.*|ghcr.io/mariosangut/tfg-backend-api:${{ github.sha }}|" apps/backend/deployment.yml
         git add apps/backend/deployment.yml
         git diff --cached --quiet || git commit -m "ci: update backend image to ${{ github.sha }}"
         git push origin gitops

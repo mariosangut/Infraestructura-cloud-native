@@ -98,7 +98,7 @@ spec:
     spec:
       containers:
       - name: api
-        image: ghcr.io/ieszaidinvergeles/tfg-backend-api:latest
+        image: ghcr.io/mariosangut/tfg-backend-api:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
@@ -239,7 +239,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ghcr.io/ieszaidinvergeles/tfg-frontend:latest
+        image: ghcr.io/mariosangut/tfg-frontend:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
@@ -269,7 +269,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/ieszaidinvergeles/2-asir-bil-pasir-mario-sanchez-gutierrez.git'
+    repoURL: 'https://github.com/mariosangut/2-asir-bil-pasir-mario-sanchez-gutierrez.git'
     targetRevision: HEAD
     path: infra/argocd-apps
   destination:
@@ -293,7 +293,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/ieszaidinvergeles/2-asir-bil-pasir-mario-sanchez-gutierrez.git'
+    repoURL: 'https://github.com/mariosangut/2-asir-bil-pasir-mario-sanchez-gutierrez.git'
     targetRevision: gitops
     path: apps/backend
   destination:
@@ -540,7 +540,7 @@ jobs:
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git fetch origin gitops 2>/dev/null || true
         git checkout -B gitops origin/gitops 2>/dev/null || git checkout -b gitops
-        sed -i "s|ghcr.io/ieszaidinvergeles/tfg-frontend:.*|ghcr.io/ieszaidinvergeles/tfg-frontend:${{ github.sha }}|" apps/frontend/frontend.yml
+        sed -i "s|ghcr.io/mariosangut/tfg-frontend:.*|ghcr.io/mariosangut/tfg-frontend:${{ github.sha }}|" apps/frontend/frontend.yml
         git add apps/frontend/frontend.yml
         git diff --cached --quiet || git commit -m "ci: update frontend image to ${{ github.sha }}"
         git push origin gitops
@@ -600,7 +600,7 @@ jobs:
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git fetch origin gitops 2>/dev/null || true
         git checkout -B gitops origin/gitops 2>/dev/null || git checkout -b gitops
-        sed -i "s|ghcr.io/ieszaidinvergeles/tfg-backend-api:.*|ghcr.io/ieszaidinvergeles/tfg-backend-api:${{ github.sha }}|" apps/backend/deployment.yml
+        sed -i "s|ghcr.io/mariosangut/tfg-backend-api:.*|ghcr.io/mariosangut/tfg-backend-api:${{ github.sha }}|" apps/backend/deployment.yml
         git add apps/backend/deployment.yml
         git diff --cached --quiet || git commit -m "ci: update backend image to ${{ github.sha }}"
         git push origin gitops
